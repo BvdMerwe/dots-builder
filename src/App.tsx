@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import { useForm } from "react-hook-form";
 import './App.css';
 
 interface Layers {
@@ -118,7 +117,7 @@ function App() {
         <div className="w-full w-1/2 p-3">
           <div className="p-3 relative">
             {selectedLayers.map((url, n) => (
-              url && <img className="absolute inset-0 object-contain" style={{zIndex: n}} src={`${process.env.PUBLIC_URL}/images/${url}`} key={n}/>
+              url && <img alt={`layer-${n}`} className="absolute inset-0 object-contain" style={{zIndex: n}} src={`${process.env.PUBLIC_URL}/images/${url}`} key={n}/>
             ))}
           </div>
         </div>
