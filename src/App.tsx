@@ -91,12 +91,12 @@ function App() {
   }, [])
   
   return (
-    <div className="container m-auto">
+    <div className="container m-auto ">
       <header className="rounded border mt-10 text-center">
         <h1 className="font-black">DOTS Builder</h1>
       </header>
-      <main className="flex mb-10">
-        <div className="w-full w-1/2 p-3">
+      <main className="flex flex-col md:flex-row mb-10">
+        <div className="w-full md:w-1/2 p-3">
           <form>
           {layers?.map((layer, n) => (
             <label key={n} className="w-full block">
@@ -114,7 +114,7 @@ function App() {
           ))}
           </form>
         </div>
-        <div className="w-full w-1/2 p-3">
+        <div className="w-full md:w-1/2 p-3 aspect-square">
           <div className="p-3 relative">
             {selectedLayers.map((url, n) => (
               url && <img alt={`layer-${n}`} className="absolute inset-0 object-contain" style={{zIndex: n}} src={`${process.env.PUBLIC_URL}/images/${url}`} key={n}/>
@@ -122,9 +122,9 @@ function App() {
           </div>
         </div>
       </main>
-      <footer className="text-center !text-[12px]">
+      <footer className="text-center !text-[12px] pb-2">
         <p className="text-[12px]">
-          made with 🧠 by 
+          made with 🧠 by &nbsp;
           <a className="text-[12px]" href="https://twitter.com/bnardus">@bnardus.eth</a>&nbsp;&&nbsp;
           <a className="text-[12px]" href="https://twitter.com/juicyjama_">@juicyjama.eth</a> 
         </p>
