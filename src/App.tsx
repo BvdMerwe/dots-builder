@@ -207,7 +207,7 @@ function App() {
         <div className="w-full md:w-1/2 p-3 aspect-square">
           <div className="p-3 relative">
             {selectedLayers.map((url, n) => (
-              url && <img alt={`layer-${n}`} className="absolute inset-0 object-contain" style={{zIndex: n}} src={`${process.env.PUBLIC_URL}/images/${url}`} key={n}/>
+              url && <img alt={`layer-${n}`} className="absolute inset-0 object-contain" style={{zIndex: n}} src={`https://bernardus.co.za/dots_images/images/${url}`} key={n}/>
             ))}
           </div>
         </div>
